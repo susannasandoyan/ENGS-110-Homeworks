@@ -22,10 +22,11 @@ while (age != 0):
 	binary = binary + str(age % 2)
 	age = int(age / 2)
 
-c = str()
-b = int(binary)
-while ( b != 0): #Making the reverse of the binary
-	a = b % 10
-	b = b // 10
-	c = str(c) + str(a)
-print(c)
+
+x = ''
+c = len(binary)
+while c > 0:
+	x += binary[c-1]
+	c -=1
+print(x)
+
