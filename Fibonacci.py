@@ -10,13 +10,13 @@ def FibSum(age):
 	print("sum =", sum)
 
 def Prime(age):
-	for i in range(2,age): #Determining weather the number is prume or not
+	for i in range(2,age-1): #Determining weather the number is prume or not
 		if (age % i == 0):
 			print (age, "is not a prime number")
-			break
-		else:
-			print(age, "is a prime number")
-			break
+			break	
+	else:
+		print(age, "is a prime number")
+	
 def Binary(age):
 	binary = str() #Finding the reverse of the binary representation of the number of the age
 	while (age != 0):
