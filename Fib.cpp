@@ -16,12 +16,12 @@ int main(){
 	printf ("Summary of all fibonacci numbers less than your age: %d", sum);
         int binary[32];
         int i = 0;
-        while (sum > 0){
-                binary[i] = sum % 2;
-                sum = sum / 2;
+        while (age > 0){
+                binary[i] = age % 2;
+               age = age / 2;
                 i++;
         }
-	printf("\nBinary representation of the sum: ");
+	printf("\nBinary representation of the age: ");
         for (int k = i-1; k>=0; k--){
                 printf ("%d", binary[k]);
         }
