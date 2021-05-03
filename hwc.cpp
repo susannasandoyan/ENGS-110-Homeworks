@@ -11,23 +11,21 @@ int FibSum(int age){
                 f1 = temp;
         }        
 
-        printf ("Summary of all fibonacci numbers less than your age: %d", sum);
+        printf ("Summary of all fibonacci numbers less than your age: %d\n", sum);
         return sum;
 }
-int Binary(int sum){
+void Binary(int sum){
        
-        int binary[32];
-        int i = 0;
-        while (sum > 0){
-                binary[i] = sum % 2;
-               sum = sum / 2;
-                i++;
+        int binary = 0;
+        printf("\nBinary representation of the sum:");
+        for (int k = 31; k>=0; k--){
+	(binary = sum>>k);
+	if (binary & 1) 
+	        printf ("1");
+	else
+		printf ("0");
         }
-        printf("\nBinary representation of the sum: ");
-        for (int k = i-1; k>=0; k--){
-                printf ("%d", binary[k]);
-        }
-        return binary[i];
+	printf ("\n");
 }
 
 int main(){
