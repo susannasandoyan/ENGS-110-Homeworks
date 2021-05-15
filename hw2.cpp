@@ -16,6 +16,9 @@ int main()
 	}
 	printf("The sum is %d\n",sum);
 	fclose(fptr);
+	fptr = fopen("expected_result.txt", "w+");
+	fprintf(fptr, "%d\n", sum);
+	fclose(fptr);
 	return 0;
 	
 
